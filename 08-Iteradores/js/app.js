@@ -3,7 +3,7 @@
 //     alert("Salir de la página")
 // }
 
-//Siempr tiene que haber una forma de
+//Siempre tiene que haber una forma de
 //salir del loop
 let i = 11;
 
