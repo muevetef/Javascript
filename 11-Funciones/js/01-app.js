@@ -26,7 +26,7 @@ function suma(n1, n2){
     return res;
 }
 
-console.log(suma('a',6))
+console.log  (suma('a',6))
 
 
 const calculadora = {
@@ -35,3 +35,4 @@ const calculadora = {
     }
 }
 //Crear los métodos que faltan para la calculadora
+calculadora.sumar(2,3);
