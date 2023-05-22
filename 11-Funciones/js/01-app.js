@@ -36,3 +36,4 @@ const calculadora = {
 }
 //Crear los métodos que faltan para la calculadora
 calculadora.sumar(2,3);
+

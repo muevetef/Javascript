@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chessboard</title>
+    <style>
+      .fila {
+        display: flex;
+        flex-wrap: wrap;
+        width: 240px;
+      }
+      .casilla {
+        width: 30px;
+        height: 30px;
+      }
+      .black {
+        background-color: black;
+      }
+      .white {
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chessboard"></div>
+    <script>
+      function createChessboard() {
+        //Traernos los elementos que necesitamos del DOM
+        const chessboardDiv = document.getElementById("chessboard");
+        let chessboardHTML = "";
+        for (let fila = 0; fila < 8; fila++) {
+          let chessFile = "";
+          for (let col = 0; col < 8; col++) {
+            // const colorCasilla  = "";
+            // if((fila + col) % 2 === 0){
+            //     colorCasilla = "white"
+            // }else{
+            //     colorCasilla = "black"
+            // }
+            const colorCasilla = (fila + col) % 2 === 0 ? "white" : "black";
+            chessFile += `<div class="casilla ${colorCasilla}"></div>`;
+          }
+          chessboardHTML += `<div class="fila">${chessFile}</div>`;
+        }
+        chessboardDiv.innerHTML = chessboardHTML;
+      }
+      createChessboard();
+    </script>
+  </body>
+</html>
