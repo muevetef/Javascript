@@ -1,0 +1,84 @@
+<!-- - Print/log numeros del 1 al 100
+- Para los multiplos de 3 imprimir "Fizz" en lugar del numero
+- Para los multiplos de 5 imprimir "Buzz"
+- Para los numeros que són multiplos de 3 y 5 imprimir "FizzBuzz"
+
+
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+...  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Reto fizz-buzz</title>
+  </head>
+  <body>
+    <script>
+      function runFizzBuzz(numero) {
+        const n = numero;
+        let i = 1;
+        while (i <= n) {
+          if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+          } else if (i % 3 === 0) {
+            console.log("Fizz");
+          } else if (i % 5 == 0) {
+            console.log("Buzz");
+          } else {
+            console.log(i);
+          }
+          i++;
+        }
+      }
+
+      function runFizzBuzzForVersion(numero) {
+        const n = numero;
+
+        for (let i = 1; i <= n; i++) {
+          if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+          } else if (i % 3 === 0) {
+            console.log("Fizz");
+          } else if (i % 5 == 0) {
+            console.log("Buzz");
+          } else {
+            console.log(i);
+          }
+        }
+      }
+      //runFizzBuzz(100);
+
+      //Break
+      for (let i = 0; i < 100; i++) {
+        if (i === 15) {
+          console.log("Ya lo tengo y no quiero seguir buscando...");
+          break;
+        }
+        console.log(i);
+      }
+      //Continue
+      for (let i = 0; i < 20; i++) {
+        if (i === 15) {
+          console.log("Este no lo quiero...");
+          continue;
+        }
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>
